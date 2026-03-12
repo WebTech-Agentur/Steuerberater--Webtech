@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Für Unternehmen | Steuerberater-Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+    <style>
+      .hidden { display: none; }
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+      .reveal { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body>
+    <header class="glass fixed-header">
+      <div class="container nav-container">
+        <a href="../index.html" class="logo">
+          <span class="logo-text">STEUER<b>PRO</b></span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="../index.html">Startseite</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <a href="kontakt.html" class="btn btn-primary">Termin</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="subpage-hero section-padding accent-bg" style="position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color) 0%, #060E1A 100%);">
+        <div class="container animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div class="badge-container" style="margin-bottom: 2rem;">
+            <span class="badge glass-card" style="padding: 0.5rem 1.5rem; color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Unternehmensberatung</span>
+          </div>
+          <h1 class="tracking-in-expand" style="color: #ffffff; background: none; -webkit-text-fill-color: initial;">Für <span class="text-gradient">Unternehmen</span></h1>
+          <p style="color: #cbd5e0; margin: 0 auto; font-size: 1.3rem; max-width: 800px;">Nachhaltiger Erfolg durch proaktive Gestaltungsberatung und effiziente digitale Buchhaltung.</p>
+        </div>
+        <!-- Animated Chart SVG -->
+        <div class="floating-icon" style="position: absolute; bottom: 10%; right: 5%; opacity: 0.15;">
+          <svg width="200" height="200" viewBox="0 0 100 100">
+             <path d="M10 90 L30 60 L50 70 L70 40 L90 20" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+             <circle cx="90" cy="20" r="6" fill="var(--accent-color)" class="pulse-accent" />
+             <path d="M10 90 H90 V10" fill="none" stroke="white" stroke-width="1" opacity="0.3" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2">
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">📊</div>
+              <h3>Finanzbuchhaltung</h3>
+              <p>Digitale Erfassung und Auswertung Ihrer Geschäftszahlen für maximale Transparenz und Steuerung.</p>
+            </div>
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">💼</div>
+              <h3>Lohn & Gehalt</h3>
+              <p>Rechtssichere Abrechnungen und umfassende Beratung bei allen Personalthemen und Sozialversicherungen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container animate-on-scroll">
+          <div class="section-header">
+            <h2>Branchen-Expertise</h2>
+            <p>Spezialisiertes Wissen für Ihren Sektor.</p>
+            <div class="section-divider"></div>
+          </div>
+          <div class="services-grid">
+            <div class="service-card glass-card">
+              <div class="icon">🏗️</div>
+              <h3>Handwerk & Bau</h3>
+              <p>Baulohn, Nachfolgeregelung und steuerliche Optimierung für Handwerksbetriebe.</p>
+            </div>
+            <div class="service-card glass-card">
+              <div class="icon">🏥</div>
+              <h3>Heilberufe</h3>
+              <p>Beratung für Ärzte, Apotheken und Therapeuten mit Fokus auf Praxismanagement.</p>
+            </div>
+            <div class="service-card glass-card">
+              <div class="icon">🛒</div>
+              <h3>E-Commerce</h3>
+              <p>Digitale Schnittstellen zu Amazon, Shopify & Co. für eine automatisierte Buchhaltung.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="grid-2">
+            <div class="animate-on-scroll">
+              <h2>Warum wir Ihr Partner sind</h2>
+              <div class="section-divider" style="margin-left: 0;"></div>
+              <ul class="adv-list">
+                <li><span>📈</span> Proaktive Steuergestaltung</li>
+                <li><span>🛡️</span> Rechtssichere Beratung</li>
+                <li><span>🤝</span> Persönlicher Ansprechpartner</li>
+                <li><span>⚡</span> Schnelle Reaktionszeiten</li>
+              </ul>
+            </div>
+            <div class="animate-on-scroll img-placeholder img-hover-zoom" id="advantages-unternehmen-placeholder" style="border-radius: 20px; box-shadow: var(--shadow-xl);"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-padding">
+      <div class="container footer-grid">
+        <div class="footer-brand stagger-item">
+          <span class="logo-text" style="font-size: 2rem; font-weight: 800;">STEUER<b>PRO</b></span>
+          <p>Exzellenz in der Steuerberatung seit über 20 Jahren. Modern. Digital. Persönlich.</p>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Dienstleistungen</h4>
+          <a href="unternehmen.html">Unternehmen</a>
+          <a href="privatpersonen.html">Privatpersonen</a>
+          <a href="leistungen.html">Alle Leistungen</a>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Kanzlei</h4>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="footer-contact stagger-item">
+          <h4>Kontakt</h4>
+          <p>📍 Musterstraße 123, 12345 Berlin</p>
+          <p>📞 +49 30 1234567</p>
+          <p>✉️ info@steuer-pro.de</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+  </body>
+</html>

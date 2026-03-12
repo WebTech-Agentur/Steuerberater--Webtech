@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Für Privatpersonen | Steuerberater-Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+    <style>
+      .hidden { display: none; }
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+      .reveal { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body>
+    <header class="glass fixed-header">
+      <div class="container nav-container">
+        <a href="../index.html" class="logo">
+          <span class="logo-text">STEUER<b>PRO</b></span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="../index.html">Startseite</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <a href="kontakt.html" class="btn btn-primary">Termin</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="subpage-hero section-padding accent-bg" style="position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color) 0%, #060E1A 100%);">
+        <div class="container animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <div class="badge-container" style="margin-bottom: 2rem;">
+            <span class="badge glass-card" style="padding: 0.5rem 1.5rem; color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Privatberatung</span>
+          </div>
+          <h1 class="tracking-in-expand" style="color: #ffffff; background: none; -webkit-text-fill-color: initial;">Für <span class="text-gradient">Privatpersonen</span></h1>
+          <p style="color: #cbd5e0; margin: 0 auto; font-size: 1.3rem; max-width: 800px;">Optimale Steuergestaltung für Ihre individuelle Lebenssituation. Wir sichern Ihre Finanzen mit Weitsicht.</p>
+        </div>
+        <!-- Shield/Protection SVG -->
+        <div class="floating-icon" style="position: absolute; top: 20%; right: 15%; opacity: 0.15;">
+          <svg width="200" height="200" viewBox="0 0 100 100">
+            <path d="M50 10 L85 25 V50 C85 75 50 90 50 90 C50 90 15 75 15 50 V25 L50 10" fill="none" stroke="white" stroke-width="2" />
+            <circle cx="50" cy="45" r="12" fill="var(--accent-color)" opacity="0.3" class="pulse-accent" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="services-grid">
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">💰</div>
+              <h3>Einkommensteuer</h3>
+              <p>Wir erstellen Ihre Steuererklärung rechtssicher und schöpfen alle Sparpotenziale aus, damit Sie mehr von Ihrem Einkommen haben.</p>
+            </div>
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">🏠</div>
+              <h3>Immobilien</h3>
+              <p>Fundierte Beratung bei Kauf, Vermietung oder Verkauf Ihrer Immobilienobjekte für langfristige Rentabilität.</p>
+            </div>
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">🎁</div>
+              <h3>Erbschaft & Schenkung</h3>
+              <p>Vorausschauende Planung zur Minimierung der steuerlichen Belastung bei der Vermögensübertragung.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container animate-on-scroll">
+          <div class="section-header">
+            <h2>Beratung für jede Lebensphase</h2>
+            <p>Wir begleiten Sie durch alle wichtigen finanziellen Meilensteine.</p>
+            <div class="section-divider"></div>
+          </div>
+          <div class="grid-2 align-center">
+            <div class="service-detail-card glass-card">
+              <h3>Berufsstart & Karriere</h3>
+              <p>Steuerliche Optimierung bei Arbeitsverhältnissen, Werbungskosten und berufsbedingten Ausgaben.</p>
+            </div>
+            <div class="img-placeholder img-hover-zoom" id="privat-img-placeholder" style="border-radius: 20px; box-shadow: var(--shadow-xl);"></div>
+            <div class="service-detail-card glass-card">
+              <h3>Familie & Vorsorge</h3>
+              <p>Kindergeld, Elterngeld und steuerliche Begünstigungen für junge Familien und Vorsorgemodelle.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="cta-box animate-on-scroll accent-bg" style="border-radius: 20px; padding: 4rem; text-align: center; box-shadow: var(--shadow-xl);">
+            <h2>Sicherheit für Ihre Finanzen</h2>
+            <p style="margin-bottom: 2rem;">Lassen Sie uns gemeinsam das Beste aus Ihrer Steuererklärung herausholen.</p>
+            <a href="kontakt.html" class="btn btn-primary pulse-accent">Jetzt Ersttermin buchen</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-padding">
+      <div class="container footer-grid">
+        <div class="footer-brand stagger-item">
+          <span class="logo-text" style="font-size: 2rem; font-weight: 800;">STEUER<b>PRO</b></span>
+          <p>Exzellenz in der Steuerberatung seit über 20 Jahren. Modern. Digital. Persönlich.</p>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Dienstleistungen</h4>
+          <a href="unternehmen.html">Unternehmen</a>
+          <a href="privatpersonen.html">Privatpersonen</a>
+          <a href="leistungen.html">Alle Leistungen</a>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Kanzlei</h4>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="footer-contact stagger-item">
+          <h4>Kontakt</h4>
+          <p>📍 Musterstraße 123, 12345 Berlin</p>
+          <p>📞 +49 30 1234567</p>
+          <p>✉️ info@steuer-pro.de</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+  </body>
+</html>

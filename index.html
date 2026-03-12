@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steuerberatung | Vertrauen & Kompetenz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+      .hidden { display: none; }
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+      .reveal { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body>
+    <header class="glass fixed-header">
+      <div class="container nav-container">
+        <a href="/" class="logo">
+          <span class="logo-text">STEUER<b>PRO</b></span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="index.html">Startseite</a>
+          <a href="pages/leistungen.html">Leistungen</a>
+          <a href="pages/uber-uns.html">Über uns</a>
+          <a href="pages/kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <a href="pages/kontakt.html" class="btn btn-primary">Termin</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <!-- Hero Section -->
+      <section class="hero section-padding">
+        <div class="container grid-2">
+          <div class="hero-content animate-on-scroll">
+            <div class="badge-container stagger-item">
+              <span class="badge glass-card" style="padding: 0.5rem 1.5rem; color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">✨ Exzellenz in Beratung</span>
+            </div>
+            <h1 class="tracking-in-expand">Exzellenz in der <span class="text-gradient">Steuerberatung</span></h1>
+            <p class="reveal-text">Wir transformieren Komplexität in Klarheit. Mit fundierter Fachexpertise und proaktiver Steuergestaltung führen wir Sie und Ihr Unternehmen sicher zum Erfolg.</p>
+            <div class="hero-btns stagger-item" style="display: flex; gap: 1rem; justify-content: center; width: 100%;">
+              <a href="pages/kontakt.html" class="btn btn-primary pulse-accent">Kostenlose Erstberatung</a>
+              <a href="pages/leistungen.html" class="btn btn-secondary">Unsere Spezialgebiete</a>
+            </div>
+          </div>
+          <div class="hero-illustration animate-on-scroll" style="position: relative; display: flex; justify-content: center; align-items: center;">
+            <div class="hero-image-container img-hover-zoom" style="position: relative; width: 100%; max-width: 600px; border-radius: 30px; overflow: hidden; box-shadow: var(--shadow-xl); border: 2px solid var(--accent-light);">
+              <img src="C:/Users/www.markazi.co/.gemini/antigravity/brain/74900f15-c9d8-403c-b5f9-a3375eac76af/steuerberater_modern_team_hero_1773304524883.png" alt="Steuerberater Team" style="width: 100%; height: auto; display: block; filter: brightness(0.95);">
+              <div class="glass-tag" style="position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 12px; font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <span style="font-size: 1.2rem;">🏆</span>
+                <span>TOP BERATER</span>
+              </div>
+              <div class="glass-tag" style="position: absolute; bottom: 20px; left: 20px; background: rgba(10,25,47,0.8); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 12px; font-weight: 600; color: #ffffff; display: flex; align-items: center; gap: 0.5rem;">
+                <span style="color: var(--accent-color);">🔒</span>
+                <span>100% SICHER</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Preview -->
+      <section class="services-preview section-padding bg-light">
+        <div class="container">
+          <div class="section-header animate-on-scroll">
+            <h2>Unsere Dienstleistungen</h2>
+            <p>Wir bieten maßgeschneiderte Lösungen für Ihre steuerlichen Herausforderungen.</p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+              <div class="icon">💼</div>
+              <h3>Steuerberatung</h3>
+              <p>Individuelle Beratung für Privatpersonen und Unternehmen.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+              <div class="icon">📊</div>
+              <h3>Buchhaltung</h3>
+              <p>Professionelle Finanz- und Lohnbuchhaltung für Ihren Erfolg.</p>
+            </div>
+            <div class="service-card animate-on-scroll">
+              <div class="icon">📝</div>
+              <h3>Steuererklärung</h3>
+              <p>Optimale Gestaltung und Erstellung Ihrer Steuererklärungen.</p>
+            </div>
+          </div>
+          <div class="center-btn animate-on-scroll">
+            <a href="pages/leistungen.html" class="btn btn-secondary">Alle Leistungen ansehen</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advantages -->
+      <section class="advantages section-padding">
+        <div class="container">
+          <div class="grid-2">
+            <div class="adv-image animate-on-scroll">
+               <div id="adv-img-placeholder" class="img-placeholder"></div>
+            </div>
+            <div class="adv-content animate-on-scroll">
+              <h2>Warum wir?</h2>
+              <ul class="adv-list">
+                <li><span>✓</span> 20+ Jahre Erfahrung in der Branche</li>
+                <li><span>✓</span> Digitale Lösungen für effiziente Prozesse</li>
+                <li><span>✓</span> Persönliche Beratung auf Augenhöhe</li>
+                <li><span>✓</span> Transparente Kommunikation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials section-padding bg-light">
+        <div class="container">
+          <div class="section-header animate-on-scroll">
+            <h2>Was unsere Kunden sagen</h2>
+          </div>
+          <div class="testimonials-slider animate-on-scroll">
+            <div class="testimonial-card">
+              <p>"Professionell, kompetent und immer erreichbar. Die beste Entscheidung für mein Unternehmen."</p>
+              <cite>- Max Mustermann, CEO Tech GmbH</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta section-padding accent-bg">
+        <div class="container animate-on-scroll">
+          <h2>Bereit für den nächsten Schritt?</h2>
+          <p>Lassen Sie uns gemeinsam Ihre steuerliche Zukunft gestalten.</p>
+          <a href="pages/kontakt.html" class="btn btn-primary">Jetzt Termin vereinbaren</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-padding">
+      <div class="container footer-grid">
+        <div class="footer-brand stagger-item">
+          <span class="logo-text" style="font-size: 2rem; font-weight: 800;">STEUER<b>PRO</b></span>
+          <p>Exzellenz in der Steuerberatung seit über 20 Jahren. Modern. Digital. Persönlich.</p>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Leistungen</h4>
+          <a href="pages/unternehmen.html">Für Unternehmen</a>
+          <a href="pages/privatpersonen.html">Für Privatpersonen</a>
+          <a href="pages/leistungen.html">Alle Leistungen</a>
+        </div>
+        <div class="footer-links stagger-item">
+          <h4>Kanzlei</h4>
+          <a href="pages/uber-uns.html">Über uns</a>
+          <a href="pages/impressum.html">Impressum</a>
+          <a href="pages/datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="footer-contact stagger-item">
+          <h4>Kontakt</h4>
+          <p>📍 Musterstraße 123, 12345 Berlin</p>
+          <p>📞 +49 30 1234567</p>
+          <p>✉️ info@steuer-pro.de</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>

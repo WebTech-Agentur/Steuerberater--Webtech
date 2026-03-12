@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leistungen | Steuerberater-Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+    <style>
+      .hidden { display: none; }
+      .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+      .reveal { opacity: 1; transform: translateY(0); }
+    </style>
+  </head>
+  <body>
+    <header class="glass fixed-header">
+      <div class="container nav-container">
+        <a href="../index.html" class="logo">
+          <span class="logo-text">STEUER<b>PRO</b></span>
+        </a>
+        <nav class="desktop-nav">
+          <a href="../index.html">Startseite</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <a href="kontakt.html" class="btn btn-primary">Termin</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <section class="subpage-hero section-padding accent-bg" style="position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color) 0%, #060E1A 100%);">
+        <div class="container animate-on-scroll">
+          <div class="badge-container" style="margin-bottom: 2rem;">
+            <span class="badge glass-card" style="padding: 0.5rem 1.5rem; color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Premium Standards</span>
+          </div>
+          <h1 class="tracking-in-expand" style="color: #ffffff; background: none; -webkit-text-fill-color: initial; text-align: center;">Unsere <span class="text-gradient">Leistungen</span></h1>
+          <p style="color: #cbd5e0; margin: 0 auto; font-size: 1.3rem; max-width: 800px; text-align: center;">Fundierte Beratung und effiziente digitale Lösungen für Ihren finanziellen Erfolg. Wir vereinen bewährte Fachkompetenz mit moderner Technik.</p>
+        </div>
+        <!-- Decorative SVG Illustration -->
+        <div class="floating-icon" style="position: absolute; top: 15%; right: 10%; opacity: 0.15; z-index: 0;">
+          <svg width="250" height="250" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="20" width="80" height="60" rx="4" fill="none" stroke="white" stroke-width="2" />
+            <path d="M10 30 H90" stroke="white" stroke-width="2" />
+            <circle cx="20" cy="25" r="1.5" fill="white" />
+            <circle cx="27" cy="25" r="1.5" fill="white" />
+            <circle cx="34" cy="25" r="1.5" fill="white" />
+            <path d="M30 50 H70 M30 60 H50" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.5" />
+            <circle cx="75" cy="65" r="12" fill="none" stroke="var(--accent-color)" stroke-width="2" class="pulse-accent" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="services-grid">
+            <!-- Privatpersonen -->
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">👤</div>
+              <h3>Privatpersonen</h3>
+              <ul>
+                <li>Einkommensteuererklärung</li>
+                <li>Steueroptimierung</li>
+                <li>Immobilienberatung</li>
+                <li>Kapitalanlagen</li>
+              </ul>
+            </div>
+            <!-- Unternehmen -->
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">🏢</div>
+              <h3>Unternehmen</h3>
+              <ul>
+                <li>Finanzbuchhaltung</li>
+                <li>Lohnabrechnung</li>
+                <li>Jahresabschluss</li>
+                <li>Unternehmensberatung</li>
+              </ul>
+            </div>
+            <!-- Digitalisierung -->
+            <div class="service-detail-card animate-on-scroll glass-card">
+              <div class="icon">💻</div>
+              <h3>Digitalisierung</h3>
+              <ul>
+                <li>Digitale Buchhaltung</li>
+                <li>Schnittstellenberatung</li>
+                <li>Papierloses Büro</li>
+                <li>Online-Zusammenarbeit</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding bg-light">
+        <div class="container">
+          <div class="section-header animate-on-scroll">
+            <h2>Unser Arbeitsprozess</h2>
+            <p>Wie wir Sie Schritt für Schritt zum Erfolg führen.</p>
+            <div class="section-divider"></div>
+          </div>
+          <div class="process-grid grid-2">
+            <div class="process-item animate-on-scroll">
+              <div class="process-step">01</div>
+              <h4>Erstgespräch</h4>
+              <p>Wir analysieren Ihre aktuelle Situation und definieren gemeinsame Ziele.</p>
+            </div>
+            <div class="process-item animate-on-scroll">
+              <div class="process-step">02</div>
+              <h4>Datenübernahme</h4>
+              <p>Einfacher Wechsel und digitale Anbindung Ihrer Buchhaltungsdaten.</p>
+            </div>
+            <div class="img-placeholder img-hover-zoom" id="leistungen-img-placeholder" style="border-radius: 20px; box-shadow: var(--shadow-xl); grid-column: span 2;"></div>
+            <div class="process-item animate-on-scroll">
+              <div class="process-step">03</div>
+              <h4>Laufende Betreuung</h4>
+              <p>Regelmäßige Auswertungen und proaktive Beratung bei Veränderungen.</p>
+            </div>
+            <div class="process-item animate-on-scroll">
+              <div class="process-step">04</div>
+              <h4>Optimierung</h4>
+              <p>Kontinuierliche Anpassung Ihrer Steuerstrategie für maximale Effizienz.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container faq-container">
+          <div class="section-header animate-on-scroll">
+            <h2>Häufige Fragen (FAQ)</h2>
+            <div class="section-divider"></div>
+          </div>
+          <div class="faq-list animate-on-scroll">
+            <details>
+              <summary>Welche Unterlagen werden für die Erstberatung benötigt?</summary>
+              <p>In der Regel reichen Ihr letzter Steuerbescheid und eine aktuelle BWA oder EÜR aus.</p>
+            </details>
+            <details>
+              <summary>Wie erfolgt die Zusammenarbeit bei der digitalen Buchhaltung?</summary>
+              <p>Wir nutzen DATEV Unternehmen Online, über das Sie Belege einfach scannen oder hochladen können.</p>
+            </details>
+            <details>
+              <summary>Bieten Sie auch internationale Steuerberatung an?</summary>
+              <p>Ja, wir beraten auch zu grenzüberschreitenden Sachverhalten und Doppelbesteuerungsabkommen.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-padding">
+      <div class="container footer-grid">
+        <div class="footer-brand stagger-item">
+          <span class="logo-text" style="font-size: 2rem; font-weight: 800;">STEUER<b>PRO</b></span>
+          <p>Exzellenz in der Steuerberatung seit über 20 Jahren. Modern. Digital. Persönlich.</p>
+        </div>
+          <div class="footer-links stagger-item">
+            <h4>Dienstleistungen</h4>
+            <a href="unternehmen.html">Unternehmen</a>
+            <a href="privatpersonen.html">Privatpersonen</a>
+            <a href="leistungen.html">Alle Leistungen</a>
+          </div>
+        <div class="footer-links stagger-item">
+          <h4>Kanzlei</h4>
+          <a href="uber-uns.html">Über uns</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="footer-contact stagger-item">
+          <h4>Kontakt</h4>
+          <p>📍 Musterstraße 123, 12345 Berlin</p>
+          <p>📞 +49 30 1234567</p>
+          <p>✉️ info@steuer-pro.de</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../src/main.js"></script>
+  </body>
+</html>
