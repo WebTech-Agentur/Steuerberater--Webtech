@@ -138,6 +138,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const closeMenuBtn = document.getElementById('close-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
+  const openMenu = () => {
+    mobileNav?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMenu = () => {
+    mobileNav?.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  mobileMenuBtn?.addEventListener('click', openMenu);
+  closeMenuBtn?.addEventListener('click', closeMenu);
+  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
   // Staggered Reveal Logic
   const staggerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

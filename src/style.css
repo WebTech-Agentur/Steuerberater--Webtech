@@ -29,6 +29,12 @@
   --nav-bg: rgba(18, 18, 18, 0.8);
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -140,7 +146,77 @@ ul {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .nav-container {
+     padding: 0 1.5rem;
+  }
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-color);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  padding: 2rem;
+}
+
+.mobile-nav-overlay.active {
+  right: 0;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.mobile-nav-links a {
+  font-size: 1.8rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.mobile-nav-links a.active {
+  color: var(--accent-color);
+}
+
+.close-menu {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
 }
 
 .theme-btn {
@@ -871,12 +947,26 @@ footer p {
   100% { transform: translateY(0); opacity: 1; }
 }
 
-.tracking-in-expand {
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+/* Desktop Hero Refinement */
+@media (min-width: 992px) {
+  .hero-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .hero-btns {
+    justify-content: flex-start !important;
+  }
+  .hero .container {
+    padding-top: 4rem;
+  }
 }
 
-@keyframes tracking-in-expand {
-  0% { letter-spacing: -0.5em; opacity: 0; }
-  40% { opacity: 0.6; }
-  100% { opacity: 1; }
+/* Global Fix for Horizontal Jitter */
+* {
+  max-width: 100%;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
 }
