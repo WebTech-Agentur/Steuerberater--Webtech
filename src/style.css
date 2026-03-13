@@ -29,6 +29,12 @@
   --nav-bg: rgba(18, 18, 18, 0.8);
 }
 
+html, body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -41,6 +47,8 @@ body {
   font-family: var(--font-body);
   line-height: 1.6;
   transition: background-color var(--transition-speed), color var(--transition-speed);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,6 +71,13 @@ ul {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
 }
 
 .btn {
@@ -322,6 +337,7 @@ footer {
   
   .hero-btns .btn {
     width: 100%;
+    margin: 0;
   }
   
   .hero-content {
@@ -359,7 +375,19 @@ footer {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
+  }
+  
+  h1 {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .section-padding {
+    padding: 2.5rem 0;
   }
 }
 
@@ -431,9 +459,10 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(2.2rem, 8vw, 4.5rem);
+  font-size: clamp(2rem, 8vw, 4.5rem);
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
+  line-height: 1.1;
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
