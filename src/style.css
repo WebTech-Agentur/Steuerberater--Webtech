@@ -435,6 +435,22 @@ footer {
   .section-padding {
     padding: 1rem 0;
   }
+
+  /* Force zero gap between text and image */
+  .hero-content p {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .hero-btns {
+    margin-top: 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-illustration {
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
 
 /* Subpage Hero Title Contrast */
