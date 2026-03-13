@@ -400,7 +400,7 @@ footer {
   
   /* Homepage specific Hero scaling & Ultra-Tight Gaps */
   .hero {
-    padding-top: calc(var(--header-height) + 1.25rem); /* Minimal top space */
+    padding-top: calc(var(--header-height) + 4.5rem); /* Increased for perfect visibility of badge and title */
     padding-bottom: 2rem;
     min-height: auto;
   }
@@ -434,22 +434,6 @@ footer {
 
   .section-padding {
     padding: 1rem 0;
-  }
-
-  /* Force zero gap between text and image */
-  .hero-content p {
-    margin-bottom: 0.75rem !important;
-  }
-
-  .hero-btns {
-    margin-top: 0.75rem !important;
-    gap: 0.75rem !important;
-  }
-
-  .hero-illustration {
-    min-height: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
   }
 }
 
@@ -1030,4 +1014,15 @@ footer p {
   0% { letter-spacing: -0.5em; opacity: 0; }
   40% { opacity: 0.6; }
   100% { opacity: 1; }
+}
+/* Performance optimizations for mobile scrolling */
+@media (max-width: 768px) {
+  .glass, .glass-card {
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+  }
+  
+  .bg-blob {
+    filter: blur(30px) !important;
+  }
 }
