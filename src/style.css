@@ -398,38 +398,42 @@ footer {
     padding: 0 1rem;
   }
   
-  /* Homepage specific Hero scaling */
+  /* Homepage specific Hero scaling & Ultra-Tight Gaps */
   .hero {
-    padding-top: calc(var(--header-height) + 2.5rem); /* Adjusted from 1.5rem to 2.5rem for perfect visibility */
-    padding-bottom: 3rem;
+    padding-top: calc(var(--header-height) + 1.25rem); /* Minimal top space */
+    padding-bottom: 2rem;
     min-height: auto;
   }
 
   .hero h1 {
     font-size: clamp(1.4rem, 8vw, 1.8rem) !important;
-    margin-bottom: 0.75rem;
-    line-height: 1.2;
+    margin-bottom: 0.5rem !important; /* Extremely tight margin-bottom for title */
+    line-height: 1.1;
     text-align: center;
   }
   
   .hero .reveal-text {
     font-size: 0.85rem;
-    line-height: 1.4;
-    max-width: 90%;
-    margin: 0 auto 1.25rem auto; /* Added tighter bottom margin */
+    line-height: 1.35;
+    max-width: 95%;
+    margin: 0 auto 0.75rem auto !important; /* Ultra-tight margin-bottom for subtitle */
     text-align: center;
   }
 
+  .hero .grid-2 {
+    gap: 0.5rem !important; /* Minimized vertical gap between text-block and image-block */
+  }
+
   .hero .hero-image-container {
-    max-width: 320px !important;
-    border-radius: 15px !important;
-    margin-top: 0.5rem !important; /* Reduced from 1.5rem */
+    max-width: 310px !important;
+    border-radius: 12px !important;
+    margin-top: 0 !important; /* Removed extra top margin */
     margin-left: auto;
     margin-right: auto;
   }
 
   .section-padding {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 }
 
