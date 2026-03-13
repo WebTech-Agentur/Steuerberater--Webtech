@@ -33,6 +33,14 @@ html, body {
   overflow-x: hidden;
   position: relative;
   width: 100%;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Hamburger menu scroll lock */
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 
 * {
