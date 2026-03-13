@@ -342,9 +342,9 @@ footer {
   
   .grid-2, .footer-grid, .contact-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem; /* Reduced from 3rem to tighten gaps on mobile */
     text-align: center;
-    align-items: flex-start; /* Ensure items start at the top, not center, to prevent clipping */
+    align-items: flex-start;
   }
   
   .hero-btns {
@@ -400,9 +400,9 @@ footer {
   
   /* Homepage specific Hero scaling */
   .hero {
-    padding-top: calc(var(--header-height) + 4rem); /* Increased from 2rem to 4rem for better visibility */
-    padding-bottom: 4rem;
-    min-height: auto; /* Remove any fixed height constraints */
+    padding-top: calc(var(--header-height) + 1.5rem); /* Tightened from 4rem */
+    padding-bottom: 3rem;
+    min-height: auto;
   }
 
   .hero h1 {
@@ -416,14 +416,14 @@ footer {
     font-size: 0.85rem;
     line-height: 1.4;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 1.25rem auto; /* Added tighter bottom margin */
     text-align: center;
   }
 
   .hero .hero-image-container {
     max-width: 320px !important;
     border-radius: 15px !important;
-    margin-top: 1.5rem !important;
+    margin-top: 0.5rem !important; /* Reduced from 1.5rem */
     margin-left: auto;
     margin-right: auto;
   }
