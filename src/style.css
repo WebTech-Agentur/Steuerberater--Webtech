@@ -527,7 +527,15 @@ h1 {
 }
 
 [data-theme='dark'] h1 {
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #C5A059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ensure 'Exzellente' is always visible in dark mode on the hero */
+[data-theme='dark'] .hero h1 {
+  background: linear-gradient(135deg, #ffffff 60%, #C5A059 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
