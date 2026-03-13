@@ -158,6 +158,24 @@ ul {
   gap: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .nav-actions {
+    gap: 0.75rem;
+  }
+  
+  .nav-actions .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-actions .btn-primary {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* Hamburger Menu Icon */
 .hamburger {
   display: none;
@@ -318,7 +336,7 @@ footer {
   }
 
   .desktop-nav a {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .grid-2, .footer-grid, .contact-grid {
@@ -375,19 +393,36 @@ footer {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 1.25rem;
+    padding: 0 1rem;
   }
   
   h1 {
-    font-size: clamp(1.8rem, 10vw, 2.5rem);
+    font-size: clamp(1.6rem, 9vw, 2.2rem);
+    margin-bottom: 1rem;
   }
   
   h2 {
-    font-size: clamp(1.5rem, 8vw, 2rem);
+    font-size: clamp(1.4rem, 7vw, 1.8rem);
+  }
+
+  .reveal-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .hero-image-container {
+    max-width: 280px !important;
+    border-radius: 20px !important;
+  }
+
+  .glass-tag {
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.7rem !important;
+    border-radius: 8px !important;
   }
 
   .section-padding {
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
 }
 
