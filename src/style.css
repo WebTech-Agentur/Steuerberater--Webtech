@@ -29,18 +29,28 @@
   --nav-bg: rgba(18, 18, 18, 0.8);
 }
 
-html, body {
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+html {
+  scroll-behavior: smooth;
+  touch-action: pan-y; /* Enable vertical touch scrolling */
 }
 
-/* Hamburger menu scroll lock */
-body.no-scroll {
-  overflow: hidden;
-  position: fixed;
+body {
+  overflow-x: hidden;
   width: 100%;
+  touch-action: pan-y;
+  -webkit-user-select: none; /* Prevent text selection during scroll on mobile */
+  user-select: none;
+}
+
+/* Allow text selection in form fields */
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Hamburger menu scroll lock — simple and safe */
+body.no-scroll {
+  overflow-y: hidden;
 }
 
 * {
@@ -856,6 +866,7 @@ footer p {
   z-index: -1;
   filter: blur(50px);
   animation: float 20s infinite alternate;
+  pointer-events: none; /* Do not intercept touch/click events */
 }
 
 @keyframes float {

@@ -142,23 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.desktop-nav');
   const body = document.body;
 
-  let scrollY = 0;
-
   const toggleMenu = () => {
-    const isOpen = hamburger?.classList.toggle('active');
+    hamburger?.classList.toggle('active');
     nav?.classList.toggle('active');
-    
-    if (isOpen) {
-      // Save scroll position before locking
-      scrollY = window.scrollY;
-      body.style.top = `-${scrollY}px`;
-      body.classList.add('no-scroll');
-    } else {
-      // Restore scroll position after unlocking
-      body.classList.remove('no-scroll');
-      body.style.top = '';
-      window.scrollTo(0, scrollY);
-    }
+    body.classList.toggle('no-scroll');
   };
 
   hamburger?.addEventListener('click', toggleMenu);
@@ -169,8 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
       hamburger?.classList.remove('active');
       nav?.classList.remove('active');
       body.classList.remove('no-scroll');
-      body.style.top = '';
-      window.scrollTo(0, scrollY);
     });
   });
 
