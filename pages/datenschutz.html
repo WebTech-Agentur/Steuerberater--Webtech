@@ -1,66 +1,144 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datenschutz | Steuerberater-Pro</title>
-    <link rel="stylesheet" href="../src/style.css">
-    <style>
-      .hidden { display: none; }
-    </style>
-  </head>
-  <body>
-    <header class="glass fixed-header">
-      <div class="container nav-container">
-        <a href="../index.html" class="logo">
-          <span class="logo-text">STEUER<b>PRO</b></span>
-        </a>
-        <nav class="desktop-nav">
-          <a href="../index.html">Startseite</a>
-          <a href="leistungen.html">Leistungen</a>
-          <a href="uber-uns.html">Über uns</a>
-          <a href="kontakt.html">Kontakt</a>
-        </nav>
-        <div class="nav-actions">
-          <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
-            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-            <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          </button>
-          <a href="kontakt.html" class="btn btn-primary">Termin</a>
-          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </header>
 
-    <div id="mobile-nav" class="mobile-nav-overlay">
-      <button class="close-menu" id="close-menu-btn">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <nav class="mobile-nav-links">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz | Steuerberater-Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../src/style.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="glass fixed-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">STEUER<b>PRO</b></span>
+      </a>
+      <nav class="desktop-nav">
         <a href="../index.html">Startseite</a>
         <a href="leistungen.html">Leistungen</a>
         <a href="uber-uns.html">Über uns</a>
         <a href="kontakt.html">Kontakt</a>
       </nav>
-      <a href="kontakt.html" class="btn btn-primary">Jetzt Termin vereinbaren</a>
-    </div>
-    <main class="section-padding" style="margin-top: 100px;">
-      <div class="container">
-        <h1>Datenschutzerklärung</h1>
-        <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Ihre Daten werden gemäß den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung vertraulich behandelt.</p>
-        <!-- (Rest of basic privacy policy) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">
+          <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+        <button class="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="kontakt.html" class="btn btn-primary">Termin</a>
       </div>
-    </main>
-    <script src="../src/main.js"></script>
-  </body>
-</html>
+    </div>
+  </header>
 
+  <main id="app">
+    <section class="subpage-hero section-padding accent-bg"
+      style="position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color) 0%, #060E1A 100%);">
+      <div class="container animate-on-scroll"
+        style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="badge-container" style="margin-bottom: 2rem;">
+          <span class="badge glass-card"
+            style="padding: 0.5rem 1.5rem; color: var(--accent-color); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">Privatsphäre</span>
+        </div>
+        <h1 class="tracking-in-expand" style="color: #ffffff; background: none; -webkit-text-fill-color: initial;">
+          <span class="text-gradient">Datenschutz</span></h1>
+        <p style="color: #cbd5e0; margin: 0 auto; font-size: 1.3rem; max-width: 800px;">Informationen über die
+          Verarbeitung Ihrer personenbezogenen Daten.</p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="glass-card animate-on-scroll" style="max-width: 900px; margin: 0 auto; padding: 4rem;">
+          <h2 style="margin-bottom: 2rem; color: var(--accent-color);">1. Datenschutz auf einen Blick</h2>
+          <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Allgemeine Hinweise</h3>
+          <p style="margin-bottom: 2rem;">Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Ihre Daten werden gemäß den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung vertraulich behandelt.</p>
+
+          <h2 style="margin-bottom: 2rem; color: var(--accent-color);">2. Datenerfassung auf unserer Website</h2>
+          <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Cookies</h3>
+          <p style="margin-bottom: 1rem;">Unsere Internetseite verwendet teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren.</p>
+          <p style="margin-bottom: 2rem;">Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht.</p>
+
+          <h3 style="margin-bottom: 1rem; color: var(--accent-color);">Kontaktformular</h3>
+          <p style="margin-bottom: 2rem;">Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.</p>
+
+          <h2 style="margin-bottom: 2rem; color: var(--accent-color);">3. Analyse-Tools und Werbung</h2>
+          <p style="margin-bottom: 2rem;">Wir verzichten auf dieser Website bewusst auf den Einsatz von Tracking-Tools von Drittanbietern, um Ihre Privatsphäre maximal zu schützen.</p>
+
+          <h2 style="margin-bottom: 2rem; color: var(--accent-color);">4. Ihre Rechte</h2>
+          <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section-padding">
+    <div class="container footer-grid">
+      <div class="footer-brand stagger-item">
+        <span class="logo-text" style="font-size: 2rem; font-weight: 800;">STEUER<b>PRO</b></span>
+        <p>Exzellenz in der Steuerberatung seit über 20 Jahren. Modern. Digital. Persönlich.</p>
+      </div>
+      <div class="footer-links stagger-item">
+        <h4>Dienstleistungen</h4>
+        <a href="unternehmen.html">Unternehmen</a>
+        <a href="privatpersonen.html">Privatpersonen</a>
+        <a href="leistungen.html">Alle Leistungen</a>
+      </div>
+      <div class="footer-links stagger-item">
+        <h4>Kanzlei</h4>
+        <a href="uber-uns.html">Über uns</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+      <div class="footer-contact stagger-item">
+        <h4>Kontakt</h4>
+        <p>📍 Musterstraße 123, 12345 Berlin</p>
+        <p>📞 +49 30 1234567</p>
+        <p>✉️ info@steuer-pro.de</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../src/main.js"></script>
+</body>
+
+</html>

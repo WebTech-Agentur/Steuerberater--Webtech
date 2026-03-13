@@ -83,30 +83,9 @@ const setHeroImage = () => {
     }
   });
 
-  const exteriorImg = document.getElementById('office-exterior-placeholder');
-  if (exteriorImg) {
-    exteriorImg.style.backgroundImage = `url('${getPath('steuerberater_office_exterior_1773301606443.png')}')`;
-    exteriorImg.style.backgroundSize = 'cover';
-    exteriorImg.style.backgroundPosition = 'center';
-  }
-
-  const privatImg = document.getElementById('privat-img-placeholder');
-  if (privatImg) {
-    privatImg.style.backgroundImage = `url('${getPath('steuerberater_hero_image_1773301366560.png')}')`;
-    privatImg.style.backgroundSize = 'cover';
-    privatImg.style.backgroundPosition = 'center';
-  }
-
-  const leistungenImg = document.getElementById('leistungen-img-placeholder');
-  if (leistungenImg) {
-    leistungenImg.style.backgroundImage = `url('${getPath('steuerberater_advantages_image_1773301425802.png')}')`;
-    leistungenImg.style.backgroundSize = 'cover';
-    leistungenImg.style.backgroundPosition = 'center';
-  }
-
   const advUnternehmenImg = document.getElementById('advantages-unternehmen-placeholder');
   if (advUnternehmenImg) {
-    advUnternehmenImg.style.backgroundImage = `url('${getPath('steuerberater_advantages_image_1773301425802.png')}')`;
+    advUnternehmenImg.style.backgroundImage = `url('${getPath('steuerberater_business_partnership_success.png')}')`;
     advUnternehmenImg.style.backgroundSize = 'cover';
     advUnternehmenImg.style.backgroundPosition = 'center';
   }
@@ -138,26 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile Menu Toggle
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const closeMenuBtn = document.getElementById('close-menu-btn');
-  const mobileNav = document.getElementById('mobile-nav');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-
-  const openMenu = () => {
-    mobileNav?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  };
-
-  const closeMenu = () => {
-    mobileNav?.classList.remove('active');
-    document.body.style.overflow = '';
-  };
-
-  mobileMenuBtn?.addEventListener('click', openMenu);
-  closeMenuBtn?.addEventListener('click', closeMenu);
-  mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
-
   // Staggered Reveal Logic
   const staggerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -176,6 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.services-grid, .team-grid, .footer-grid').forEach(grid => {
     grid.querySelectorAll(':scope > *').forEach(item => item.classList.add('stagger-item'));
     staggerObserver.observe(grid);
+  });
+
+  // Hamburger Menu Logic
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.desktop-nav');
+  const body = document.body;
+
+  const toggleMenu = () => {
+    hamburger?.classList.toggle('active');
+    nav?.classList.toggle('active');
+    body.classList.toggle('no-scroll');
+  };
+
+  hamburger?.addEventListener('click', toggleMenu);
+
+  // Close menu when clicking a link
+  document.querySelectorAll('.desktop-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger?.classList.remove('active');
+      nav?.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
   });
 
   // Add Background Blobs
