@@ -1053,3 +1053,24 @@ footer p {
     filter: blur(30px) !important;
   }
 }
+
+/* Contact page - Kanzlei Berlin section alignment */
+.contact-section-header {
+  text-align: left;
+}
+.contact-divider {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-section-header {
+    text-align: center;
+  }
+  .contact-divider {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
