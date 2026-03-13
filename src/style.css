@@ -400,7 +400,7 @@ footer {
   
   /* Homepage specific Hero scaling */
   .hero {
-    padding-top: calc(var(--header-height) + 2rem); /* Start higher up on small phones */
+    padding-top: calc(var(--header-height) + 4rem); /* Increased from 2rem to 4rem for better visibility */
     padding-bottom: 4rem;
     min-height: auto; /* Remove any fixed height constraints */
   }
