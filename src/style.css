@@ -1062,6 +1062,22 @@ footer p {
   margin-left: 0;
 }
 
+.contact-details {
+  display: flex;
+  gap: 4rem;
+  margin-top: 2.5rem;
+}
+
+.contact-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-color);
+}
+
+.contact-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .contact-section-header {
     text-align: center;
@@ -1072,5 +1088,14 @@ footer p {
   }
   .contact-info {
     text-align: center;
+  }
+  .contact-details {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  .contact-item {
+    width: 100%;
   }
 }
