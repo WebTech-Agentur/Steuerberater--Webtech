@@ -45,10 +45,8 @@ const initAnimations = () => {
 
 const setHeroImage = () => {
   const getPath = (filename) => {
-    // Determine if we are in a subfolder (pages/) or root
-    const isSubpage = window.location.pathname.includes('/pages/') || window.location.href.includes('/pages/');
-    const prefix = isSubpage ? '../src/assets/images/' : 'src/assets/images/';
-    return `${prefix}${filename}`;
+    // Images are moved to public/images/ and served at root /images/
+    return `/images/${filename}`;
   };
 
   const heroImg = document.getElementById('hero-img-placeholder');
